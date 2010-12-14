@@ -1,0 +1,115 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '/home/boss/py/main_window.ui'
+#
+# Created: Tue Dec 14 12:49:16 2010
+#      by: PyQt4 UI code generator 4.7.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+class Ui_mainWindow(object):
+    def setupUi(self, mainWindow):
+        mainWindow.setObjectName("mainWindow")
+        mainWindow.resize(452, 456)
+        mainWindow.setMinimumSize(QtCore.QSize(452, 456))
+        mainWindow.setMaximumSize(QtCore.QSize(452, 456))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("resources/boss.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        mainWindow.setWindowIcon(icon)
+        mainWindow.setUnifiedTitleAndToolBarOnMac(False)
+        self.centralWidget = QtGui.QWidget(mainWindow)
+        self.centralWidget.setObjectName("centralWidget")
+        self.tabWidget = QtGui.QTabWidget(self.centralWidget)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 452, 455))
+        self.tabWidget.setMinimumSize(QtCore.QSize(452, 455))
+        self.tabWidget.setMaximumSize(QtCore.QSize(452, 455))
+        self.tabWidget.setCursor(QtCore.Qt.PointingHandCursor)
+        self.tabWidget.setTabPosition(QtGui.QTabWidget.North)
+        self.tabWidget.setTabShape(QtGui.QTabWidget.Rounded)
+        self.tabWidget.setElideMode(QtCore.Qt.ElideLeft)
+        self.tabWidget.setDocumentMode(False)
+        self.tabWidget.setTabsClosable(False)
+        self.tabWidget.setMovable(False)
+        self.tabWidget.setObjectName("tabWidget")
+        self.sys_info = QtGui.QWidget()
+        self.sys_info.setObjectName("sys_info")
+        self.sys_info_view = QtWebKit.QWebView(self.sys_info)
+        self.sys_info_view.setGeometry(QtCore.QRect(-10, 40, 800, 600))
+        self.sys_info_view.setUrl(QtCore.QUrl("about:blank"))
+        self.sys_info_view.setObjectName("sys_info_view")
+        self.tabWidget.addTab(self.sys_info, "")
+        self.tab_2 = QtGui.QWidget()
+        self.tab_2.setCursor(QtCore.Qt.PointingHandCursor)
+        self.tab_2.setObjectName("tab_2")
+        self.tabWidget.addTab(self.tab_2, "")
+        self.tab = QtGui.QWidget()
+        self.tab.setObjectName("tab")
+        self.layoutWidget = QtGui.QWidget(self.tab)
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 421, 261))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.gridLayout = QtGui.QGridLayout(self.layoutWidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_3 = QtGui.QLabel(self.layoutWidget)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 0, 0, 1, 1)
+        self.label_4 = QtGui.QLabel(self.layoutWidget)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout.addWidget(self.label_4, 1, 0, 1, 1)
+        self.formLayout = QtGui.QFormLayout()
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtGui.QLabel(self.layoutWidget)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.label)
+        self.lineEdit = QtGui.QLineEdit(self.layoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Courier 10 Pitch")
+        font.setPointSize(11)
+        font.setWeight(50)
+        font.setItalic(False)
+        font.setBold(False)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("font: 11pt \"Courier 10 Pitch\";")
+        self.lineEdit.setObjectName("lineEdit")
+        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.lineEdit)
+        self.label_2 = QtGui.QLabel(self.layoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.label_2)
+        self.pushButton = QtGui.QPushButton(self.layoutWidget)
+        self.pushButton.setObjectName("pushButton")
+        self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.pushButton)
+        self.textEdit = QtGui.QTextEdit(self.layoutWidget)
+        self.textEdit.setObjectName("textEdit")
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.textEdit)
+        self.gridLayout.addLayout(self.formLayout, 2, 0, 1, 1)
+        self.tabWidget.addTab(self.tab, "")
+        mainWindow.setCentralWidget(self.centralWidget)
+
+        self.retranslateUi(mainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(mainWindow)
+
+    def retranslateUi(self, mainWindow):
+        mainWindow.setWindowTitle(QtGui.QApplication.translate("mainWindow", "BOSS Hardware Manager", None, QtGui.QApplication.UnicodeUTF8))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sys_info), QtGui.QApplication.translate("mainWindow", "System Info", None, QtGui.QApplication.UnicodeUTF8))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("mainWindow", "Device Driver Assistant ", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("mainWindow", "Along with query system hardware and installed software info ", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("mainWindow", "will be send to BOSS support team.", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("mainWindow", "Enter your E-mail ID  :", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit.setText(QtGui.QApplication.translate("mainWindow", "etwe4ytwe", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("mainWindow", "Enter query                :", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtGui.QApplication.translate("mainWindow", "Send query", None, QtGui.QApplication.UnicodeUTF8))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("mainWindow", "Need Help", None, QtGui.QApplication.UnicodeUTF8))
+
+from PyQt4 import QtWebKit
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    mainWindow = QtGui.QMainWindow()
+    ui = Ui_mainWindow()
+    ui.setupUi(mainWindow)
+    mainWindow.show()
+    sys.exit(app.exec_())
+
