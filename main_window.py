@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """
@@ -11,7 +11,7 @@ from PyQt4 import QtWebKit
 from PyQt4 import QtCore, QtGui
 
 
-from Ui_main_window import Ui_mainWindow
+from ui.Ui_main_window import Ui_mainWindow
 
 class mainWindow(QMainWindow, Ui_mainWindow):
     """
