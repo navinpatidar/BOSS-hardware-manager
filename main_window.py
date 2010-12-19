@@ -29,10 +29,11 @@ class mainWindow(QMainWindow, Ui_mainWindow):
         """
         Slot documentation goes here.
         """
-        self.sys_info_view.setUrl(QUrl("file:///home/boss/py/resources/system-info.html"))
-        print "navin patidar"
+	
+        #self.sys_info_view.setUrl(QUrl("file:///home/boss/py/resources/system-info.html"))
+        #print "navin patidar"
         # TODO: not implemented yet
-        raise NotImplementedError
+        #raise NotImplementedError
     
     @pyqtSignature("QPoint")
     def on_sys_info_customContextMenuRequested(self, pos):
