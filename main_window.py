@@ -61,16 +61,8 @@ class mainWindow(QMainWindow, Ui_mainWindow):
         """
         Slot documentation goes here.
         """
-<<<<<<< HEAD
         if p0==0:
              hw_info_in_xml()
-=======
-	
-        #self.sys_info_view.setUrl(QUrl("file:///home/boss/py/resources/system-info.html"))
-        #print "navin patidar"
-        # TODO: not implemented yet
-        #raise NotImplementedError
->>>>>>> 45d4cf71f811309a843c810f6a28cba498ab3903
     
         # TODO: not implemented yet
         #raise NotImplementedError

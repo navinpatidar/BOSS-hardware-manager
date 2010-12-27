@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-<<<<<<< HEAD
 from xml.dom.minidom import parse
 import re
 class xml_parser():
@@ -61,29 +60,3 @@ class xml_parser():
 
 
 
-=======
-from  xml.dom.minidom import parse
-import re 
-class xml_parser:
-	def __init__(self,path):
-		self.path=path
-		dom=parse(self.path)
-		i=0
-		for node in   dom.getElementsByTagName("node"):
-    			 
-    			 for n in node.childNodes:
-				 if n.nodeType == n.ELEMENT_NODE:
-				    t=re.compile(r'<.*?>(\w*)')
-				    value = t.match(n.toxml()).group(1)
-				    #print n.toxml()
-				    print " "*i,n.nodeName,":",value
-            			    
-    			 else:
-            			 i=i+1
-		
-
-
-xml_parser("./resources/hw.xml")
-
-		
->>>>>>> 45d4cf71f811309a843c810f6a28cba498ab3903
