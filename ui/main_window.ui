@@ -86,6 +86,7 @@
       <string>System Info</string>
      </attribute>
      <widget class="QTreeWidget" name="treeWidget">
+<<<<<<< HEAD
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -194,6 +195,19 @@
         <font>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
+=======
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>411</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+>>>>>>> 45d4cf71f811309a843c810f6a28cba498ab3903
        </property>
       </column>
      </widget>
