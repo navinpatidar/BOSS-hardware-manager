@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/boss/py/main_window.ui'
+# Form implementation generated from reading ui file '/home/boss/BOSS-hardware-manager/ui/main_window.ui'
 #
-# Created: Tue Dec 14 12:49:16 2010
+# Created: Fri Dec 24 10:44:56 2010
 #      by: PyQt4 UI code generator 4.7.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,9 +12,10 @@ from PyQt4 import QtCore, QtGui
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
-        mainWindow.resize(452, 456)
-        mainWindow.setMinimumSize(QtCore.QSize(452, 456))
-        mainWindow.setMaximumSize(QtCore.QSize(452, 456))
+        mainWindow.setEnabled(True)
+        mainWindow.resize(500, 600)
+        mainWindow.setMinimumSize(QtCore.QSize(500, 600))
+        mainWindow.setMaximumSize(QtCore.QSize(500, 600))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("resources/boss.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         mainWindow.setWindowIcon(icon)
@@ -22,9 +23,9 @@ class Ui_mainWindow(object):
         self.centralWidget = QtGui.QWidget(mainWindow)
         self.centralWidget.setObjectName("centralWidget")
         self.tabWidget = QtGui.QTabWidget(self.centralWidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 452, 455))
-        self.tabWidget.setMinimumSize(QtCore.QSize(452, 455))
-        self.tabWidget.setMaximumSize(QtCore.QSize(452, 455))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 500, 600))
+        self.tabWidget.setMinimumSize(QtCore.QSize(500, 600))
+        self.tabWidget.setMaximumSize(QtCore.QSize(500, 600))
         self.tabWidget.setCursor(QtCore.Qt.PointingHandCursor)
         self.tabWidget.setTabPosition(QtGui.QTabWidget.North)
         self.tabWidget.setTabShape(QtGui.QTabWidget.Rounded)
@@ -35,10 +36,35 @@ class Ui_mainWindow(object):
         self.tabWidget.setObjectName("tabWidget")
         self.sys_info = QtGui.QWidget()
         self.sys_info.setObjectName("sys_info")
-        self.sys_info_view = QtWebKit.QWebView(self.sys_info)
-        self.sys_info_view.setGeometry(QtCore.QRect(-10, 40, 800, 600))
-        self.sys_info_view.setUrl(QtCore.QUrl("about:blank"))
-        self.sys_info_view.setObjectName("sys_info_view")
+        self.treeWidget = QtGui.QTreeWidget(self.sys_info)
+        self.treeWidget.setGeometry(QtCore.QRect(0, 0, 220, 575))
+        self.treeWidget.setMinimumSize(QtCore.QSize(220, 575))
+        self.treeWidget.setMaximumSize(QtCore.QSize(220, 575))
+        self.treeWidget.setFrameShadow(QtGui.QFrame.Sunken)
+        self.treeWidget.setIndentation(10)
+        self.treeWidget.setUniformRowHeights(True)
+        self.treeWidget.setWordWrap(False)
+        self.treeWidget.setColumnCount(1)
+        self.treeWidget.setObjectName("treeWidget")
+        self.treeWidget.header().setVisible(True)
+        self.tableWidget = QtGui.QTableWidget(self.sys_info)
+        self.tableWidget.setGeometry(QtCore.QRect(220, 0, 280, 575))
+        self.tableWidget.setMinimumSize(QtCore.QSize(280, 575))
+        self.tableWidget.setMaximumSize(QtCore.QSize(280, 575))
+        self.tableWidget.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.tableWidget.setProperty("showDropIndicator", True)
+        self.tableWidget.setShowGrid(True)
+        self.tableWidget.setGridStyle(QtCore.Qt.DashLine)
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setRowCount(0)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget.verticalHeader().setVisible(False)
         self.tabWidget.addTab(self.sys_info, "")
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setCursor(QtCore.Qt.PointingHandCursor)
@@ -92,6 +118,9 @@ class Ui_mainWindow(object):
 
     def retranslateUi(self, mainWindow):
         mainWindow.setWindowTitle(QtGui.QApplication.translate("mainWindow", "BOSS Hardware Manager", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.headerItem().setText(0, QtGui.QApplication.translate("mainWindow", "Hardware Devices", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.horizontalHeaderItem(0).setText(QtGui.QApplication.translate("mainWindow", "Device info", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.horizontalHeaderItem(1).setText(QtGui.QApplication.translate("mainWindow", "Value", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sys_info), QtGui.QApplication.translate("mainWindow", "System Info", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("mainWindow", "Device Driver Assistant ", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("mainWindow", "Along with query system hardware and installed software info ", None, QtGui.QApplication.UnicodeUTF8))
@@ -102,7 +131,6 @@ class Ui_mainWindow(object):
         self.pushButton.setText(QtGui.QApplication.translate("mainWindow", "Send query", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("mainWindow", "Need Help", None, QtGui.QApplication.UnicodeUTF8))
 
-from PyQt4 import QtWebKit
 
 if __name__ == "__main__":
     import sys
